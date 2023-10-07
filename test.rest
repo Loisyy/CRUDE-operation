@@ -1,0 +1,19 @@
+#  POST http://localhost:3000/auth/register
+#  Content-Type: application/json
+
+#  {
+#      "fullName": "Lois nkeiru",
+#      "username": "Loisyy",
+#      "role": "admin",
+#      "password": "Lois125"
+#  }
+
+//👆you can create a similar id but add role after email and name it admin
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "Loisyy",
+    "password": "Lois125"
+}
