@@ -24,8 +24,8 @@ router.post("/register", async (req, res) => {
 
 //to create a login route
 router.post("/login", async (req, res) => {
-  const { email, password } = req.body;
-  const userDetail = await User.findOne({ email });
+  const { username, password } = req.body;
+  const userDetail = await User.findOne({username });
 
   if (!userDetail) return res.status(404).send("user-not-found");
   //accept password by comparing 
@@ -33,11 +33,11 @@ router.post("/login", async (req, res) => {
 
   if (!doesPasswordMatch) return res.status(400).send("invalid credentials");
 
-  const { email: userEmail, _id, role } = userDetail;
+  const {username: userName, _id, role } = userDetail;
   //passing user specfic details
   const token = jwt.sign(
     {
-      email: userEmail,
+      username: userName,
       userId: _id,
       role: role,
     },
