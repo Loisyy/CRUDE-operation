@@ -154,3 +154,8 @@ app.post('/users/register', (req, res) => {
 // Login as a user
 app.post('/users/login', (req, res) => {
   const { username, password } =n
+
+
+
+
+  https://www.postman.com/loisy/workspace/kode-task/collection/28225597-042a8c6e-c0bb-4813-bd43-d8ad1bcf08d9?action=share&creator=28225597
